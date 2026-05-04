@@ -43,6 +43,7 @@ func List(args []string) {
 	}
 	defer rows.Close()
 
+	var i = 1
 	for rows.Next() {
 		var id int
 		var taskname string
@@ -57,7 +58,8 @@ func List(args []string) {
 			check = "x"
 		}
 
-		fmt.Printf("%d | [%s] %s\n", id, check, taskname)
+		fmt.Printf("%-3d: [%-1s] %-20s (id:%3d)\n", i, check, taskname, id)
+		i++
 	}
 
 	if err := rows.Err(); err != nil {
