@@ -28,6 +28,8 @@ todo-cli/
 
 `rem <id>`         Removes a task from the list
 
+`clear`            Removes all tasks at once
+
 `mark <id>`        Marks a task as done
 
 `unmark <id>`      Removes the done mark
@@ -101,6 +103,6 @@ From the root of the project on Windows run:
 * [x] Filtering for list command.
 * [x] Switch to SQLite for storage.
 * [ ] Add a better ID system that doesn't go up infinitely.
-* [ ] Add a clear command that removes all tasks.
+* [x] Add a clear command that removes all tasks.
 
 > **_NOTE:_**  Todo-cli probably works on macOS but has not yet been tested.

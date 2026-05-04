@@ -15,8 +15,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	cmd := os.Args[1]
-
 	dbConn, err := db.Init()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "failed to initialize database:", err)
@@ -24,7 +22,7 @@ func main() {
 	}
 	defer dbConn.Close()
 
-	switch cmd {
+	switch os.Args[1] {
 	case "add":
 		commands.Add(dbConn, os.Args[2:])
 	case "remove":
@@ -39,8 +37,10 @@ func main() {
 		commands.Mark(dbConn, os.Args[2:])
 	case "unmark":
 		commands.Unmark(dbConn, os.Args[2:])
+	case "clear":
+		commands.Clear(dbConn, os.Args[2:])
 	default:
-		fmt.Fprintln(os.Stderr, "unknown command:", cmd)
+		fmt.Fprintln(os.Stderr, "unknown command:", os.Args[1])
 		os.Exit(1)
 	}
 }

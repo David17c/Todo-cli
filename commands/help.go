@@ -11,6 +11,7 @@ func Help() {
 Commands:
   add <task>        	Add a new task
   remove <id>       	Remove a task by ID
+  clear               Removes all tasks at once
   list [done|todo]  	List tasks
   edit <id> <new task>  Edit an existing task
   mark <id>         	Mark a task as done

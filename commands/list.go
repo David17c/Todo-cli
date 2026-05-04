@@ -12,7 +12,7 @@ func List(db *sql.DB, args []string) {
 	var queryArgs []any
 
 	if len(args) > 1 {
-		fmt.Println("too many arguments.")
+		fmt.Println("Too many arguments.")
 		return
 	}
 
