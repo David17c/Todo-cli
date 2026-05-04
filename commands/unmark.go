@@ -11,7 +11,7 @@ import (
 
 func Unmark(db *sql.DB, args []string) {
 	if len(args) == 0 {
-		fmt.Println("Usage: Unmark <id>")
+		Help()
 		return
 	}
 

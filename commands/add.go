@@ -8,7 +8,7 @@ import (
 
 func Add(db *sql.DB, args []string) {
 	if len(args) == 0 {
-		fmt.Println("Usage: add <taskname>")
+		fmt.Println("Usage: add <task>")
 		return
 	}
 

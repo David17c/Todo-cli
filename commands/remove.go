@@ -11,7 +11,7 @@ import (
 
 func Remove(db *sql.DB, args []string) {
 	if len(args) == 0 {
-		fmt.Println("Usage: remove <ID>")
+		fmt.Println("Usage: remove <id>")
 		return
 	}
 

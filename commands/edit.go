@@ -10,6 +10,11 @@ import (
 
 func Edit(db *sql.DB, args []string) {
 
+	if len(args) < 4 {
+		fmt.Println("Usage: edit <id> <new task>")
+		return
+	}
+
 	id, err := strconv.Atoi(args[2])
 	if err != nil {
 		fmt.Println("Invalid: ID is not a number.")

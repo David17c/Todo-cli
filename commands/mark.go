@@ -11,7 +11,7 @@ import (
 
 func Mark(db *sql.DB, args []string) {
 	if len(args) == 0 {
-		fmt.Println("Usage: Mark <id>")
+		fmt.Println("Usage: mark <id>")
 		return
 	}
 
