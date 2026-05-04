@@ -32,7 +32,7 @@ func main() {
 	case "list":
 		commands.List(dbConn, os.Args[2:])
 	case "edit":
-		commands.Edit(dbConn, os.Args[2:])
+		commands.Edit(dbConn, os.Args)
 	case "help":
 		commands.Help()
 	case "mark":

@@ -2,16 +2,37 @@
 package commands
 
 import (
-	//	"database/sql"
 	"database/sql"
 	"fmt"
+	"strconv"
 	"strings"
-	// _ "modernc.org/sqlite"
 )
 
 func Edit(db *sql.DB, args []string) {
-	task := strings.Join(args, " ")
-	fmt.Println(task)
-}
 
-//Coming soon
+	id, err := strconv.Atoi(args[2])
+	if err != nil {
+		fmt.Println("Invalid: ID is not a number.")
+	}
+
+	Newtask := strings.Join(args[3:], " ")
+
+	result, err := db.Exec("UPDATE tasks SET taskname = ? WHERE id = ?", Newtask, id)
+	if err != nil {
+		fmt.Println("Query error:", err)
+		return
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		fmt.Println("Error checking result:", err)
+		return
+	}
+
+	if rowsAffected == 0 {
+		fmt.Println("No task found with that ID.")
+		return
+	}
+
+	fmt.Printf("Task '%d' succesfully changed to '%s'.", id, Newtask)
+}
