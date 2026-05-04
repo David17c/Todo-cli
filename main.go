@@ -4,9 +4,9 @@ package main
 import (
 	"fmt"
 	"os"
-	"todo-cli/commands"
 
-	_ "modernc.org/sqlite"
+	"todo-cli/commands"
+	"todo-cli/db"
 )
 
 func main() {
@@ -17,21 +17,28 @@ func main() {
 
 	cmd := os.Args[1]
 
+	dbConn, err := db.Init()
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "failed to initialize database:", err)
+		os.Exit(1)
+	}
+	defer dbConn.Close()
+
 	switch cmd {
 	case "add":
-		commands.Add(os.Args[2:])
+		commands.Add(dbConn, os.Args[2:])
 	case "remove":
-		commands.Remove(os.Args[2:])
+		commands.Remove(dbConn, os.Args[2:])
 	case "list":
-		commands.List(os.Args[2:])
+		commands.List(dbConn, os.Args[2:])
 	case "edit":
-		commands.Edit(os.Args[2:])
+		commands.Edit(dbConn, os.Args[2:])
 	case "help":
 		commands.Help()
 	case "mark":
-		commands.Mark(os.Args[2:])
+		commands.Mark(dbConn, os.Args[2:])
 	case "unmark":
-		commands.Unmark(os.Args[2:])
+		commands.Unmark(dbConn, os.Args[2:])
 	default:
 		fmt.Fprintln(os.Stderr, "unknown command:", cmd)
 		os.Exit(1)

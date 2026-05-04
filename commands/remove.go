@@ -9,7 +9,7 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-func Remove(args []string) {
+func Remove(db *sql.DB, args []string) {
 	if len(args) == 0 {
 		fmt.Println("Usage: remove <ID>")
 		return
@@ -20,13 +20,6 @@ func Remove(args []string) {
 		fmt.Println("Invalid: ID is not a number.")
 		return
 	}
-
-	db, err := sql.Open("sqlite", "file:tasks.db")
-	if err != nil {
-		fmt.Println("Error opening database:", err)
-		return
-	}
-	defer db.Close()
 
 	result, err := db.Exec("DELETE FROM tasks WHERE id = ?", id)
 	if err != nil {

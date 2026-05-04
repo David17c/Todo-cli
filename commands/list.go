@@ -7,14 +7,7 @@ import (
 	"log"
 )
 
-func List(args []string) {
-	db, err := sql.Open("sqlite", "file:tasks.db")
-	if err != nil {
-		fmt.Println("Error opening database:", err)
-		return
-	}
-	defer db.Close()
-
+func List(db *sql.DB, args []string) {
 	query := "SELECT id, taskname, status FROM tasks"
 	var queryArgs []any
 

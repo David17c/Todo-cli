@@ -9,7 +9,7 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-func Unmark(args []string) {
+func Unmark(db *sql.DB, args []string) {
 	if len(args) == 0 {
 		fmt.Println("Usage: Unmark <id>")
 		return
@@ -19,13 +19,6 @@ func Unmark(args []string) {
 	if err != nil {
 		fmt.Println("Invalid: ID is not a number.")
 	}
-
-	db, err := sql.Open("sqlite", "file:tasks.db")
-	if err != nil {
-		fmt.Println("Error opening database:", err)
-		return
-	}
-	defer db.Close()
 
 	result, err := db.Exec("UPDATE tasks SET status = 0 WHERE id = ?", id)
 	if err != nil {
