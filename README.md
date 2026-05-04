@@ -1,6 +1,6 @@
 # Todo-cli
 
-A small command-line todo app written in Go that works cross platform on: `Windows`, `Linux` and `macOS`
+A small command-line todo app written in Go that works cross platform on: `Windows` and `Linux`.
 
 ```
 todo-cli/
@@ -40,6 +40,10 @@ todo-cli/
 
 ---
 
+## Installation (Recommended way)
+
+Go to: https://github.com/David17c/todo-cli/releases and look for the newest version made for your OS.
+
 ## Installation
 
 ### 1. Install Go
@@ -50,52 +54,53 @@ Make sure you have Go installed (1.20+ recommended):
 go version
 ```
 
-If not installed, download it from: [https://go.dev/dl/](https://go.dev/dl/)
+If not installed, download it from: https://go.dev/doc/install
 
 ---
 
 ### 2. Clone
 
+If you have [Git](https://git-scm.com/) installed run.
 ```bash
-git clone https://github.com/your-username/todo-cli.git
-cd todo-cli
+git clone https://github.com/David17c/todo-cli.git
 ```
+Or if you don't
+
+Go to [The main page](https://github.com/David17c/todo-cli) of this repo, click the green code button and select "Download as ZIP", extract the folder then continue.
 
 ---
 
 ### 3. Build
 
+Use the `cd` command to navigate to the root folder.
+
+Then run.
+
 ```bash
-go build -o todo-cli
+go build -o build
 ```
-
-Go will automatically download all dependencies defined in `go.mod`.
-
+This will create an executable file in the build folder.
 ---
 
 ### 4. Run
 
+From the root of the project on Linux run:
 ```bash
-./todo-cli
+./build/todo-cli
 ```
 
-**Windows:**
-
+From the root of the project on Windows run:
 ```bash
-todo-cli.exe
+./build/todo-cli.exe
 ```
 
 ---
-
-### Optional: Run without building
-
-```bash
-go run .
-```
-
 ## To do
 
 * [x] Task editing using `edit` command.
 * [x] Filtering for list command.
 * [x] Switch to SQLite for storage.
 * [ ] Add a better ID system that doesn't go up infinitely.
+* [ ] Add a clear command that removes all tasks.
+
+> **_NOTE:_**  Todo-cli probably works on macOS but has not yet been tested.
