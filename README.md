@@ -7,20 +7,26 @@ todo-cli/
 ├── build/           # compiled binaries
 │
 ├── commands/
-│   ├── add.go       # add a todo
-│   ├── edit.go      # edit a todo
-│   ├── help.go      # show help
-│   ├── list.go      # list todos
-│   ├── mark.go      # mark as done
+│   ├── add.go       # add a new todo
+│   ├── edit.go      # edit an existing todo
+│   ├── help.go      # display CLI usage and available commands
+│   ├── list.go      # list all todos
+│   ├── mark.go      # mark a todo as completed
 │   ├── remove.go    # remove a todo
-│   ├── cleat.go     # Removes all tasks
-│   ├── unmark.go    # unmark as done
+│   ├── clear.go     # remove all todos
+│   ├── unmark.go    # mark a todo as not completed
 │
-├── main.go          # entry point
-├── go.mod           # module config
+├── cli/
+│   ├── parser.go    # parse input and dispatch commands
+│
+├── interactive/
+│   ├── repl.go      # interactive REPL for managing todos
+│
+├── main.go          # application entry point
+├── go.mod           # module definition and dependencies
 ├── go.sum           # dependency checksums
-├── README.md        # project info
-└── .gitignore       # ignored files (includes build/)
+├── README.md        # project documentation and usage
+└── .gitignore       # List of files Git ignores
 ```
 
 ## Commands
