@@ -51,7 +51,7 @@ todo-cli/
 
 ## Installation (Recommended way)
 
-Go to: https://github.com/David17c/todo-cli/releases and look for the newest version made for your OS.
+Go to: [Releases](https://github.com/David17c/todo-cli/releases) and look for the newest version made for your OS.
 
 ## Installation
 
@@ -89,6 +89,7 @@ Then run.
 go build -o build
 ```
 This will create an executable file in the build folder.
+
 ---
 
 ### 4. Run
