@@ -113,4 +113,4 @@ From the root of the project on Windows run:
 * [ ] Add a better ID system that doesn't go up infinitely.
 * [x] Add a clear command that removes all tasks.
 
-> **_NOTE:_**  Todo-cli probably works on macOS but has not yet been tested.
+> **_NOTE:_**  Todo-cli probably works on macOS but has not been tested since i don't own one.
