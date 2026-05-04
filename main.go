@@ -11,7 +11,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Fprintln(os.Stderr, "please provide a command (add, rem, list, edit)")
+		commands.Help()
 		os.Exit(1)
 	}
 

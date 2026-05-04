@@ -26,7 +26,6 @@ func Init() (*sql.DB, error) {
 		return nil, err
 	}
 
-	// Create tables ONCE here
 	_, err = db.Exec(`
 	CREATE TABLE IF NOT EXISTS tasks (
 		id INTEGER PRIMARY KEY,
