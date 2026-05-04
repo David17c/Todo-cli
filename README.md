@@ -95,6 +95,7 @@ go run .
 
 ## To do
 
-* [x] Task editing using `edit` command
-* [x] Filtering for list command
-* [x] Switch to SQLite for storage
+* [x] Task editing using `edit` command.
+* [x] Filtering for list command.
+* [x] Switch to SQLite for storage.
+* [ ] Add a better ID system that doesn't go up infinitely.
