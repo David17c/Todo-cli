@@ -4,6 +4,8 @@ A small command-line todo app written in Go that works cross platform on: `Windo
 
 ```
 todo-cli/
+├── build/           # compiled binaries
+│
 ├── commands/
 │   ├── add.go       # add a todo
 │   ├── edit.go      # edit a todo
@@ -17,7 +19,7 @@ todo-cli/
 ├── go.mod           # module config
 ├── go.sum           # dependency checksums
 ├── README.md        # project info
-└── .gitignore       # ignored files
+└── .gitignore       # ignored files (includes build/)
 ```
 
 ## Commands
