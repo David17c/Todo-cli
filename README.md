@@ -13,6 +13,7 @@ todo-cli/
 │   ├── list.go      # list todos
 │   ├── mark.go      # mark as done
 │   ├── remove.go    # remove a todo
+│   ├── cleat.go     # Removes all tasks
 │   ├── unmark.go    # unmark as done
 │
 ├── main.go          # entry point
