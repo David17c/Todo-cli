@@ -11,7 +11,7 @@ import (
 )
 
 func Clear(db *sql.DB, args []string) {
-	if len(args) > 1 {
+	if len(args) > 0 {
 		fmt.Println("Too many arguments.")
 		return
 	}

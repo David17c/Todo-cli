@@ -41,6 +41,6 @@ func main() {
 		commands.Clear(dbConn, os.Args[2:])
 	default:
 		fmt.Fprintln(os.Stderr, "unknown command:", os.Args[1])
-		os.Exit(1)
+		return
 	}
 }
