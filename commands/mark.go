@@ -37,5 +37,5 @@ func Mark(db *sql.DB, args []string) {
 		return
 	}
 
-	fmt.Printf("Task '%d' succesfully marked 'done'.", id)
+	fmt.Printf("Task '%d' succesfully marked 'done'.\n", id)
 }

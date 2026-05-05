@@ -39,5 +39,5 @@ func Edit(db *sql.DB, args []string) {
 		return
 	}
 
-	fmt.Printf("Task '%d' succesfully changed to '%s'.", id, Newtask)
+	fmt.Printf("Task '%d' succesfully changed to '%s'.\n", id, Newtask)
 }
