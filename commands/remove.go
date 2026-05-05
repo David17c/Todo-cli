@@ -38,5 +38,5 @@ func Remove(db *sql.DB, args []string) {
 		return
 	}
 
-	fmt.Printf("Task '%d' succesfully removed.", id)
+	fmt.Printf("Task '%d' succesfully removed.\n", id)
 }

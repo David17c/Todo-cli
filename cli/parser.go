@@ -26,6 +26,8 @@ func Parser(args []string) {
 		commands.Add(dbConn, args[1:])
 	case "remove":
 		commands.Remove(dbConn, args[1:])
+	case "rem":
+		commands.Remove(dbConn, args[1:])
 	case "list":
 		commands.List(dbConn, args[1:])
 	case "edit":
