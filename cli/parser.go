@@ -1,4 +1,4 @@
-// interactive/parser.go
+// cli/parser.go
 package cli
 
 import (

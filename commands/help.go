@@ -6,8 +6,8 @@ import (
 )
 
 func Help() {
-	fmt.Println(`Usage: todo <command> [arguments]
-
+	fmt.Println(`
+Usage: todo <command> [arguments]
 Commands:
   add <task>        	  Add a new task
   remove <id>       	  Remove a task by ID
