@@ -18,6 +18,7 @@ func Edit(db *sql.DB, args []string) {
 	id, err := strconv.Atoi(args[2])
 	if err != nil {
 		fmt.Println("Invalid: ID is not a number.")
+		return
 	}
 
 	Newtask := strings.Join(args[3:], " ")
