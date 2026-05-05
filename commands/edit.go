@@ -10,18 +10,18 @@ import (
 
 func Edit(db *sql.DB, args []string) {
 
-	if len(args) < 4 {
-		fmt.Println("Usage: edit <id> <new task>")
-		return
-	}
-
-	id, err := strconv.Atoi(args[2])
+	id, err := strconv.Atoi(args[1])
 	if err != nil {
 		fmt.Println("Invalid: ID is not a number.")
 		return
 	}
 
-	Newtask := strings.Join(args[3:], " ")
+	Newtask := strings.Join(args[2:], " ")
+
+	if Newtask == "" {
+		fmt.Println("Usage: edit <ID> <New task>")
+		return
+	}
 
 	result, err := db.Exec("UPDATE tasks SET taskname = ? WHERE id = ?", Newtask, id)
 	if err != nil {

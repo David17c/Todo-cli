@@ -55,7 +55,7 @@ Go to: [Releases](https://github.com/David17c/todo-cli/releases) and look for th
 
 ## Installation
 
-### 1. Install Go
+#### 1. Install Go
 
 Make sure you have Go installed (1.20+ recommended):
 
@@ -67,7 +67,7 @@ If not installed, download it from: https://go.dev/doc/install
 
 ---
 
-### 2. Clone
+#### 2. Clone
 
 If you have [Git](https://git-scm.com/) installed run.
 ```bash
@@ -79,7 +79,7 @@ Go to [The main page](https://github.com/David17c/todo-cli) of this repo, click 
 
 ---
 
-### 3. Build
+#### 3. Build
 
 Use the `cd` command to navigate to the root folder.
 
@@ -92,7 +92,7 @@ This will create an executable file in the build folder.
 
 ---
 
-### 4. Run
+#### 4. Run
 
 From the root of the project on Linux run:
 ```bash
