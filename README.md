@@ -47,15 +47,13 @@ todo-cli/
 
 `help`             Shows available commands
 
----
-
 ## Installation (Recommended way)
 
 Go to: [Releases](https://github.com/David17c/todo-cli/releases) and look for the newest version made for your OS.
 
 ## Installation
 
-#### 1. Install Go
+### 1. Install Go
 
 Make sure you have Go installed (1.20+ recommended):
 
@@ -65,9 +63,8 @@ go version
 
 If not installed, download it from: https://go.dev/doc/install
 
----
 
-#### 2. Clone
+### 2. Clone
 
 If you have [Git](https://git-scm.com/) installed run.
 ```bash
@@ -77,9 +74,8 @@ Or if you don't
 
 Go to [The main page](https://github.com/David17c/todo-cli) of this repo, click the green code button and select "Download as ZIP", extract the folder then continue.
 
----
 
-#### 3. Build
+### 3. Build
 
 Use the `cd` command to navigate to the root folder.
 
@@ -90,9 +86,7 @@ go build -o build
 ```
 This will create an executable file in the build folder.
 
----
-
-#### 4. Run
+### 4. Run
 
 From the root of the project on Linux run:
 ```bash
@@ -104,7 +98,6 @@ From the root of the project on Windows run:
 ./build/todo-cli.exe
 ```
 
----
 ## To do
 
 * [x] Task editing using `edit` command.
