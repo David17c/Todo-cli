@@ -105,4 +105,4 @@ From the root of the project on Windows run:
 * [x] Switch to SQLite for storage.
 * [x] Add a clear command that removes all tasks.
 
-> **_NOTE:_**  Todo-cli probably works on macOS but has not been tested since i don't own one.
+> **_NOTE:_**  Todo-cli probably works on macOS but has not been tested since i don't have a mac.
