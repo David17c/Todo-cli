@@ -1,6 +1,6 @@
 # Todo-cli
 
-A small command-line todo app written in Go that works cross platform on: `Windows` and `Linux`.
+A small command-line todo app written in Go.
 
 ```
 todo-cli/
@@ -104,5 +104,3 @@ From the root of the project on Windows run:
 * [x] Filtering for list command.
 * [x] Switch to SQLite for storage.
 * [x] Add a clear command that removes all tasks.
-
-> **_NOTE:_**  Todo-cli probably works on macOS but has not been tested since i don't have a mac.
