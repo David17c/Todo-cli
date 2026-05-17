@@ -1,33 +1,6 @@
 # Todo-cli
 
-A small command-line todo app written in Go.
-
-```
-todo-cli/
-├── build/           # compiled binaries
-│
-├── commands/
-│   ├── add.go       # add a new todo
-│   ├── edit.go      # edit an existing todo
-│   ├── help.go      # display CLI usage and available commands
-│   ├── list.go      # list all todos
-│   ├── mark.go      # mark a todo as completed
-│   ├── remove.go    # remove a todo
-│   ├── clear.go     # remove all todos
-│   ├── unmark.go    # mark a todo as not completed
-│
-├── cli/
-│   ├── parser.go    # parse input and dispatch commands
-│
-├── interactive/
-│   ├── repl.go      # interactive REPL for managing todos
-│
-├── main.go          # application entry point
-├── go.mod           # module definition and dependencies
-├── go.sum           # dependency checksums
-├── README.md        # project documentation and usage
-└── .gitignore       # List of files Git ignores
-```
+A minimal command-line todo app written in Go.
 
 ## Commands
 
@@ -97,10 +70,3 @@ From the root of the project on Windows run:
 ```bash
 ./build/todo-cli.exe
 ```
-
-## To do
-
-* [x] Task editing using `edit` command.
-* [x] Filtering for list command.
-* [x] Switch to SQLite for storage.
-* [x] Add a clear command that removes all tasks.
