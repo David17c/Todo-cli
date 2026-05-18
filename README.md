@@ -1,6 +1,6 @@
 # Todo-cli
 
-A minimal command-line todo app written in Go.
+A minimal command-line todo app i made to get better with Go, Git and SQLite
 
 ## Commands
 
@@ -19,10 +19,6 @@ A minimal command-line todo app written in Go.
 `list`             Lists all tasks (optionally filter by: `done` | `active`)
 
 `help`             Shows available commands
-
-## Installation (Recommended way)
-
-Go to: [Releases](https://github.com/David17c/todo-cli/releases) and look for the newest version made for your OS.
 
 ## Installation
 
